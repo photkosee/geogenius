@@ -1,6 +1,18 @@
 "use client";
 
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
+
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+  Button,
+  Spinner,
+  Image,
+} from "@nextui-org/react";
 
 const getInfo = async (name: string) => {
   const response = await fetch(
@@ -11,16 +23,56 @@ const getInfo = async (name: string) => {
 };
 
 const Map = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isLoading, setIsLoading] = useState<Boolean>(false);
+  const [name, setName] = useState<string>("");
+  const [city, setCity] = useState<string>("");
+  const [flag, setFlag] = useState<string>("");
+
   const handleClick = (e: MouseEvent<SVGPathElement>) => {
+    e.preventDefault();
     const name: string | null = e.currentTarget.getAttribute("name");
     if (!name) return;
+    onOpen();
+    setIsLoading(true);
     getInfo(name).then((data) => {
       console.log(data);
+      setName(data.name.common);
+      setCity(data.capital[0]);
+      setFlag(data.flags.svg);
+      setIsLoading(false);
     });
   };
 
   return (
-    <div>
+    <div className="max-w-full max-h-[calc(80%)] pt-10">
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Information
+              </ModalHeader>
+              <ModalBody>
+                {isLoading ? (
+                  <Spinner size="lg" color="primary" />
+                ) : (
+                  <div className="flex flex-col gap-5 w-full items-center">
+                    <p className="text-xl font-bold">{name}</p>
+                    <Image src={flag} alt="flag" width={250} height={150} />
+                    <p>Capital city: {city}</p>
+                  </div>
+                )}
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
       <svg
         baseProfile="tiny"
         fill="#ececec"
@@ -31,7 +83,7 @@ const Map = () => {
         stroke-width=".2"
         version="1.2"
         viewBox="0 0 2000 857"
-        width="2000"
+        className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
