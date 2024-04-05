@@ -8,6 +8,6 @@ I'm not very good at remembering countries' names and their positions, and I hav
 
 ## Built With
 
-- Next.js - Development environment
+- Next.js 14 - Development environment
 - Tailwind CSS - CSS framework
 - Next UI - Components library for User Interface
