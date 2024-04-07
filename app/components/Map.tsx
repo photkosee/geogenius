@@ -59,7 +59,14 @@ const Map = () => {
                 ) : (
                   <div className="flex flex-col gap-5 w-full items-center">
                     <p className="text-xl font-bold">{name}</p>
-                    <Image src={flag} alt="flag" width={250} height={150} />
+                    <Image
+                      src={flag}
+                      alt="flag"
+                      width={0}
+                      height={0}
+                      radius="none"
+                      className="w-auto h-[130px] border-1 border-black"
+                    />
                     <p>Capital city: {city}</p>
                   </div>
                 )}
@@ -73,6 +80,7 @@ const Map = () => {
           )}
         </ModalContent>
       </Modal>
+
       <svg
         baseProfile="tiny"
         fill="#ececec"
