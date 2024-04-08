@@ -33,10 +33,9 @@ const Map = () => {
     e.preventDefault();
     const name: string | null = e.currentTarget.getAttribute("name");
     if (!name) return;
-    onOpen();
     setIsLoading(true);
+    onOpen();
     getInfo(name).then((data) => {
-      console.log(data);
       setName(data.name.common);
       setCity(data.capital[0]);
       setFlag(data.flags.svg);
@@ -50,7 +49,7 @@ const Map = () => {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
+              <ModalHeader className="flex flex-col gap-1 text-black">
                 Information
               </ModalHeader>
               <ModalBody>
@@ -58,16 +57,16 @@ const Map = () => {
                   <Spinner size="lg" color="primary" />
                 ) : (
                   <div className="flex flex-col gap-5 w-full items-center">
-                    <p className="text-xl font-bold">{name}</p>
+                    <p className="text-xl font-bold text-black">{name}</p>
                     <Image
                       src={flag}
                       alt="flag"
                       width={0}
                       height={0}
                       radius="none"
-                      className="w-auto h-[130px] border-1 border-black"
+                      className="w-auto min-w-[170px] h-[130px] border-1 border-black"
                     />
-                    <p>Capital city: {city}</p>
+                    <p className="text-black">Capital city: {city}</p>
                   </div>
                 )}
               </ModalBody>
