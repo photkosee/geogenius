@@ -90,6 +90,7 @@ const Map = () => {
         stroke-width=".2"
         version="1.2"
         viewBox="0 0 2000 857"
+        width={2000}
         className="w-full h-auto min-w-[280px]"
         xmlns="http://www.w3.org/2000/svg"
       >
