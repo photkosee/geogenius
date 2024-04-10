@@ -16,6 +16,7 @@ import {
   TransformWrapper,
   useControls,
 } from "react-zoom-pan-pinch";
+import Link from "next/link";
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -68,11 +69,16 @@ export default function Home() {
         <Button isIconOnly size="sm" onClick={onOpen}>
           <Info />
         </Button>
-        <a href="https://github.com/photkosee" target="_blank">
+        <Link
+          href="https://github.com/photkosee"
+          target="_blank"
+          className="flex h-full items-center justify-center"
+          passHref
+        >
           <Button isIconOnly size="sm">
             <Github />
           </Button>
-        </a>
+        </Link>
       </div>
 
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -97,7 +103,7 @@ export default function Home() {
 
       <div
         className="w-full h-full flex items-center justify-center
-        bg-[#1f3540] rounded-md relative max-w-7xl"
+        bg-[#1f3540] rounded-md relative max-w-7xl min-h-[calc(50vh)]"
       >
         <TransformWrapper>
           <TransformComponent>
