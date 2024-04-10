@@ -44,7 +44,7 @@ const Map = () => {
   };
 
   return (
-    <div className="max-w-full max-h-[calc(80%)] pt-10">
+    <div className="max-w-full h-full pt-10">
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalContent>
           {(onClose) => (
