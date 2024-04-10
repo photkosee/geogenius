@@ -16,5 +16,4 @@ I'm not very good at remembering countries' names and their positions, and I hav
 
 - [Simple Map](https://simplemaps.com/resources/svg-maps) - Map SVG
 - [Rest Countries API](https://restcountries.com/) - Fetching country data
-
-## What's next?
+- [React Zoom Pan Pinch](https://www.npmjs.com/package/react-zoom-pan-pinch) - Built a zoomable container

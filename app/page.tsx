@@ -10,17 +10,60 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import Map from "./components/Map";
-import { Github, Info } from "lucide-react";
+import { Github, Info, RotateCcw, ZoomIn, ZoomOut } from "lucide-react";
+import {
+  TransformComponent,
+  TransformWrapper,
+  useControls,
+} from "react-zoom-pan-pinch";
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const Controls = () => {
+    const { zoomIn, zoomOut, resetTransform } = useControls();
+    return (
+      <div
+        className="absolute left-1 bottom-1 md:left-3 md:bottom-3
+        flex gap-1 md:gap-2"
+      >
+        <Button
+          isIconOnly
+          size="sm"
+          aria-label="zoom in"
+          onClick={() => zoomIn()}
+        >
+          <ZoomIn />
+        </Button>
+        <Button
+          isIconOnly
+          size="sm"
+          aria-label="zoom out"
+          onClick={() => zoomOut()}
+        >
+          <ZoomOut />
+        </Button>
+        <Button
+          isIconOnly
+          size="sm"
+          aria-label="reset transform"
+          onClick={() => resetTransform()}
+        >
+          <RotateCcw />
+        </Button>
+      </div>
+    );
+  };
 
   return (
     <main
       className="flex flex-col min-h-screen max-w-full items-center justify-center
       bg-neutral-900 gap-5 p-3 lg:p-5"
     >
-      <div className="flex items-center justify-center text-white gap-x-2 text-3xl font-semibold">
+      <div
+        className="flex items-center justify-center text-white
+        gap-x-2 text-3xl font-semibold"
+      >
         <p className="text-amber-500">GeoGenius</p> Info
         <Button isIconOnly size="sm" onClick={onOpen}>
           <Info />
@@ -52,8 +95,16 @@ export default function Home() {
         </ModalContent>
       </Modal>
 
-      <div className="w-full h-full flex items-center justify-center pb-5 pr-16 bg-[#1f3540] rounded-md">
-        <Map />
+      <div
+        className="w-full h-full flex items-center justify-center
+        bg-[#1f3540] rounded-md relative max-w-7xl"
+      >
+        <TransformWrapper>
+          <TransformComponent>
+            <Map />
+          </TransformComponent>
+          <Controls />
+        </TransformWrapper>
       </div>
     </main>
   );
