@@ -26,7 +26,7 @@ export default function Home() {
     return (
       <div
         className="absolute left-1 bottom-1 md:left-3 md:bottom-3
-        flex gap-1 md:gap-2"
+        flex gap-2 md:gap-3"
       >
         <Button
           isIconOnly
@@ -88,7 +88,7 @@ export default function Home() {
               <ModalHeader className="flex flex-col gap-1 text-black">
                 How to use GeoGenius?
               </ModalHeader>
-              <ModalBody>
+              <ModalBody className="text-black">
                 Simply click on any country on the map to get its information.
               </ModalBody>
               <ModalFooter>
@@ -103,7 +103,7 @@ export default function Home() {
 
       <div
         className="w-full h-full flex items-center justify-center
-        bg-[#1f3540] rounded-md relative max-w-7xl min-h-[calc(50vh)]"
+        bg-[#1f3540] rounded-md relative max-w-7xl"
       >
         <TransformWrapper>
           <TransformComponent>
