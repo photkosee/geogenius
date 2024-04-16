@@ -17,6 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="description"
+          content="A web application that allows you to explore the information, name, capital, and flag of each country with just a click on a world map."
+        />
+        <link rel="author" href="https://github.com/photkosee" />
+        <meta name="author" content="Phot Koseekrainiramon" />
+        <meta name="creator" content="Phot Koseekrainiramon" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
