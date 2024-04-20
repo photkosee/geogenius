@@ -6,6 +6,10 @@
 
 I'm not very good at remembering countries' names and their positions, and I haven't had a chance to work on mapping components in frontend yet. That's why I came up with a small project working with mapping components that can help people who has the same issue like me memorize countries better!
 
+## Feature
+
+- Clicking on any country on a map to fetch information about that country
+
 ## Built with
 
 - [Next.js 14](https://nextjs.org/) - Development environment
