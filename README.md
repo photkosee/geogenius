@@ -26,6 +26,11 @@ I'm not very good at remembering countries' names and their positions, and I hav
 
 You can make use of this in many different ways, using it to visualize global data as you please, as long as you can find a suitable API or even build one yourself. There are some libraries that you could use instead of assigning events in an SVG tag like I did. [React Simple Map](https://www.react-simple-maps.io/) is another interesting choice if you plan to work on a similar project.
 
+## Author
+Phot Koseekrainiramon
+- [LinkedIn](https://www.linkedin.com/in/phot-kosee/)
+- [GitHub](https://github.com/photkosee)
+
 ## Contributing
 
 Pull requests are welcome. Please open an issue first to discuss what'd like to improve.

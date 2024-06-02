@@ -70,7 +70,7 @@ export default function Home() {
           <Info />
         </Button>
         <Link
-          href="https://github.com/photkosee"
+          href="https://github.com/photkosee/geogenius"
           target="_blank"
           className="flex h-full items-center justify-center"
           passHref
