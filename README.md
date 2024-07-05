@@ -2,13 +2,24 @@
 
 <p align="center">Explore the information, name, capital, and flag of each country with just a click on a world map. <a href="https://geogenius-two.vercel.app/">Try it out now!</a></p>
 
-## Background
+### Table of Contents
+
+1. [Inspiration](#inspiration)
+2. [What this does?](#what-this-does)
+3. [Built with](#built-with)
+4. [Data Sources](#data-sources)
+5. [What's next?](#whats-next)
+6. [Author](#author)
+7. [Deployment](#deployment)
+8. [Contributing](#contributing)
+
+## Inspiration
 
 I'm not very good at remembering countries' names and their positions, and I haven't had a chance to work on mapping components in frontend yet. That's why I came up with a small project working with mapping components that can help people who has the same issue like me memorize countries better!
 
-## Feature
+## What this does?
 
-- Clicking on any country on a map to fetch information about that country
+This will show users a world map and allow them to click on any country. It will then fetch information about that country to display to the users.
 
 ## Built with
 
@@ -31,6 +42,12 @@ Phot Koseekrainiramon
 - [LinkedIn](https://www.linkedin.com/in/phot-kosee/)
 - [GitHub](https://github.com/photkosee)
 
+## Deployment
+
+This project is deployed to Vercel:
+
+[https://geogenius-two.vercel.app/](https://geogenius-two.vercel.app/)
+
 ## Contributing
 
-Pull requests are welcome. Please open an issue first to discuss what'd like to improve.
+Pull requests are welcome. Please open an issue first to discuss what'd you like to improve.
