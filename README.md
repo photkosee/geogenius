@@ -2,16 +2,16 @@
 
 <p align="center">Explore the information, name, capital, and flag of each country with just a click on a world map. <a href="https://geogenius-two.vercel.app/">Try it out now!</a></p>
 
-### Table of Contents
+## Table of Contents
 
-1. [Inspiration](#inspiration)
-2. [What this does?](#what-this-does)
-3. [Built with](#built-with)
-4. [Data Sources](#data-sources)
-5. [What's next?](#whats-next)
-6. [Author](#author)
-7. [Deployment](#deployment)
-8. [Contributing](#contributing)
+- [Inspiration](#inspiration)
+- [What this does?](#what-this-does)
+- [Built with](#built-with)
+- [Data Sources](#data-sources)
+- [What's next?](#whats-next)
+- [Author](#author)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
 
 ## Inspiration
 
@@ -39,7 +39,7 @@ You can make use of this in many different ways, using it to visualize global da
 
 ## Author
 Phot Koseekrainiramon
-- [LinkedIn](https://www.linkedin.com/in/phot-kosee/)
+- [LinkedIn](https://www.linkedin.com/in/photkosee/)
 - [GitHub](https://github.com/photkosee)
 
 ## Deployment
